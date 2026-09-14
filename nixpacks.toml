@@ -1,0 +1,10 @@
+# Pin Node 18.x - better-sqlite3 precisa compilar nativo e trava em versoes
+# mais novas do Node sem isso (mesmo problema que ja apareceu no aclera.cars).
+[phases.setup]
+nixPkgs = ["nodejs-18_x"]
+
+[phases.install]
+cmds = ["npm install"]
+
+[start]
+cmd = "node server.js"
